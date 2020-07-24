@@ -17,7 +17,7 @@ cc_defaults {
 
 cc_library_headers {
     name: "display_headers",
-    vendor: true,
+    vendor_available: true,
     export_include_dirs: [
         "include",
         "libcopybit",
@@ -27,10 +27,9 @@ cc_library_headers {
         "gpu_tonemapper",
         "sdm/include",
         "gralloc",
-        "libdebug",
     ],
-    header_libs: ["libhardware_headers", "display_intf_headers"],
-    export_header_lib_headers: ["libhardware_headers", "display_intf_headers"],
+    header_libs: ["libhardware_headers"],
+    export_header_lib_headers: ["libhardware_headers"],
 }
 
 subdirs = [
